@@ -1,0 +1,72 @@
+displayName: 'Prinect Ingress'       # Display name for the module that will be displayed in the UI.
+moduleName: 'prinect-ingress'        # Module name that will be used to reference the module, and uniquely identify the module and their versions.
+description: 'Data ingress for Pinect API requests.'       # Module description that will be displayed in the UI.
+versionName: 'v1.0.0'                    # Module version name that will be used to reference the module version, and uniquely identify the module version with a common name.
+isPublic: true                          # Boolean value that indicates if the module is Public or Private.
+categories:                             # Array of category that will be used to group the module in the UI.
+  - 'Ingress'
+type: 'Input'      # Module type (Input, Processing, Output) that will be used to group the module in the UI.
+image:
+  name: 'weevenetwork/prinect-ingress'     # Image name from the docker registry.
+  tag: 'v1.0.0'                               # Image tag from the docker registry.
+  homepage: 'https://hub.docker.com/r/weevenetwork/prinect-ingress'      # Image homepage from the docker registry.
+repository: 'https://github.com/weeve-modules/prinect-ingress'     # Repository URL to source code.
+envs:                                   # Array of environment variables that will be used to configure the module. Also used to show related fields on the UI.
+  - name: Base URL
+    key: BASE_URL
+    description: Base URL for the API. Ends with /rest
+    value: 'http://localhost:15011/PrinectAPILocal/rest'
+    type: 'text'
+    options: []
+    dependencies: []
+  - name: Username
+    key: USERNAME
+    description: Username for the API.
+    value: 'admin'
+    type: 'text'
+    options: []
+    dependencies: []
+  - name: Password
+    key: PASSWORD
+    description: Password for the API.
+    value: 'password12345'
+    type: 'text'
+    options: []
+    dependencies: []
+  - name: Device ID
+    key: DEVICE_ID
+    description: ID of the device you want the data for.
+    value: 'XL105-6'
+    type: 'text'
+    options: []
+    dependencies: []
+  - name: Resource
+    key: RESOURCE
+    description: Resource you want the data for.
+    value: 'device data'
+    type: 'select'
+    options:
+      - 'device data'
+      - 'activity data'
+      - 'consumption data'
+    dependencies: []
+  - name: Polling interval
+    key: INTERVAL
+    description: Interval in seconds between each API call.
+    value: '5'
+    type: 'number'
+    options: []
+    dependencies: []
+ports: []
+mounts: []
+envMounts: []
+devices: []
+envDevices: []
+envPorts: []
+tags:                                   # Array of tags.
+  - 'HTTP'
+  - 'Python'
+  - 'Input'
+  - 'Heidelberg'
+  - '1.0.0'
+icon: 'https://icons-020-demo.s3.eu-central-1.amazonaws.com/mi_http_input.png'    # Icon URL that will be displayed in the UI.

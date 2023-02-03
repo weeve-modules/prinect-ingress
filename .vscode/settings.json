@@ -1,0 +1,9 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "cSpell.words": [
+        "WEEVE"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+}

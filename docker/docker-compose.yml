@@ -1,0 +1,18 @@
+version: "3.0"
+services:
+  prinect-ingress:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    environment:
+      MODULE_NAME: "prinect-ingress"
+      MODULE_TYPE: "Input"
+      EGRESS_URLS: "https://testdockercompose.free.beeceptor.com"
+      BASE_URL: "http://localhost:15011/PrinectAPILocal/rest"
+      USERNAME: "admin"
+      PASSWORD: "password12345"
+      DEVICE_ID: "XL105-6"
+      RESOURCE: "device data"
+      INTERVAL: "5"
+    ports:
+      - 80:80
