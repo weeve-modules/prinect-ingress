@@ -3,7 +3,7 @@
 |           |                                                                                       |
 | --------- | ------------------------------------------------------------------------------------- |
 | Name      | Prinect Ingress                                                                       |
-| Version   | v1.0.0                                                                                |
+| Version   | v1.0.1                                                                                |
 | DockerHub | [weevenetwork/prinect-ingress](https://hub.docker.com/r/weevenetwork/prinect-ingress) |
 | authors   | Paul Gaiduk                                                                           |
 
